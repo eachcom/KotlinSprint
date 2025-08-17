@@ -7,7 +7,7 @@ fun main () {
     val internSalary = 20000
 
     val allWorkersSalary = numberOfWorkers * workersSalary
-    val allInternsSalary = numberOfInterns * internSalary // Этой переменной можно избежать сделав расчет общей зарплаты вот так: allWorkersAndInternsSalary = (numberOfWorkers * workersSalary) + (numberOfInterns * internSalary). Или вот так: allWorkersSalary + numberOfInterns * internSalary. Но мне кажется, что лучше выделить отдельно. Или для экономии памяти лучше делать максимально сжато?
+    val allInternsSalary = numberOfInterns * internSalary
     val allWorkersAndInternsSalary = allInternsSalary + allWorkersSalary
     val averageSalary = allWorkersAndInternsSalary / (numberOfInterns + numberOfWorkers)
 
