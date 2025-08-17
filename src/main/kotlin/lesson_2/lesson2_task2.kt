@@ -6,8 +6,8 @@ fun main () {
     val workersSalary = 30000
     val internSalary = 20000
 
-    val allWorkersSalary = numberOfWorkers * workersSalary
     val allInternsSalary = numberOfInterns * internSalary
+    val allWorkersSalary = numberOfWorkers * workersSalary
     val allWorkersAndInternsSalary = allInternsSalary + allWorkersSalary
     val averageSalary = allWorkersAndInternsSalary / (numberOfInterns + numberOfWorkers)
 
