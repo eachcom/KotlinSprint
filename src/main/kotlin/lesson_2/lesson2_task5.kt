@@ -9,7 +9,7 @@ fun main() {
     val interestRate = 16.7
     val depositPeriod = 20
 
-    val amountToPay = depositAmount * (ONE_FOR_MATH + interestRate/PERCENT_MATH).pow(depositPeriod)
+    val amountToPay = depositAmount * (ONE_FOR_MATH + interestRate / PERCENT_MATH).pow(depositPeriod)
 
     println(String.format("%.3f", amountToPay))
 }
