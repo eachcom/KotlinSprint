@@ -1,12 +1,14 @@
 package org.example.lesson_5
 
-const val TRUE_ANSWER = "4"
-
 fun main() {
-    print("Для входа в программу решите пример: 2 + 2 = ")
+    val firstNumberToCalc = (0..10).random()
+    val secondNumberToCalc = (0..10).random()
+    val trueAnswer = firstNumberToCalc + secondNumberToCalc
+    print("Для входа в программу решите пример: $firstNumberToCalc + $secondNumberToCalc = ")
     val userAnswer = readln()
+    val userAnswerInt = userAnswer.toInt()
 
-    if (userAnswer == TRUE_ANSWER) {
+    if (userAnswerInt == trueAnswer) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
