@@ -1,15 +1,13 @@
 package org.example.lesson_5
 
 fun main() {
-    val firstNumberToCalc = (0..10).random()
-    val secondNumberToCalc = (0..10).random()
-    val trueAnswer = firstNumberToCalc + secondNumberToCalc
+    val Number1 = (0..10).random()
+    val Number2 = (0..10).random()
 
-    print("Для входа в программу решите пример: $firstNumberToCalc + $secondNumberToCalc = ")
-    val userAnswer = readln()
-    val userAnswerInt = userAnswer.toInt()
+    print("Для входа в программу решите пример: $Number1 + $Number2 = ")
+    val userAnswer = readln().toInt()
 
-    if (userAnswerInt == trueAnswer) {
+    if (userAnswer == Number1 + Number2) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
