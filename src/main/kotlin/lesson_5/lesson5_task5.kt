@@ -1,8 +1,8 @@
 package org.example.lesson_5
 
 fun main() {
-    val trueAnswers = mutableSetOf<Int>()
     val userAnswers = mutableSetOf<Int>()
+    val trueAnswers = mutableSetOf<Int>()
 
     for (i in 1..3 ) {
         trueAnswers.add((0..42).random())
