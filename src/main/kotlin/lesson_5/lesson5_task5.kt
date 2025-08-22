@@ -1,32 +1,27 @@
 package org.example.lesson_5
 
-fun main(){
-    val number1 = (0..42).random()
-    val number2 = (0..42).random()
-    val number3 = (0..42).random()
-    val trueAnswers = setOf<Int>(number1, number2, number3)
+fun main() {
+    val trueAnswers = mutableSetOf<Int>()
+    val userAnswers = mutableSetOf<Int>()
+
+    for (i in 1..3 ) {
+        trueAnswers.add((0..42).random())
+    }
 
     println("Добро пожаловать в игру! Угадайте три числа от 0 до 42!")
 
-    print("Введите первое число: ")
-    val userNumber1 = readln().toInt()
-    print("Введите второе число: ")
-    val userNumber2 = readln().toInt()
-    print("Введите третье число: ")
-    val userNumber3 = readln().toInt()
-
-    val userAnswers = setOf<Int>(userNumber1, userNumber2, userNumber3)
+    for (i in 1..3 ) {
+        print("Введите число №$i: ")
+        userAnswers.add(readln().toInt())
+    }
 
     val result = trueAnswers.intersect(userAnswers)
 
-    if (result.count() == 3) {
-        println("Вы выйграли Джекпот!")
-    } else if (result.count() == 2) {
-        println("Вы выйграли большой приз!")
-    } else if (result.count() == 1) {
-        println("Вы выйграли маленький приз!")
-    } else {
-        println("К сожалению, Вы проиграли.")
+    when (result.count()) {
+        3 -> println("Вы выйграли Джекпот!")
+        2 -> println("Вы выйграли большой приз!")
+        1 -> println("Вы выйграли маленький приз!")
+        0 -> println("К сожалению, Вы проиграли.")
     }
 
     print("Выигрышные числа: $trueAnswers")
